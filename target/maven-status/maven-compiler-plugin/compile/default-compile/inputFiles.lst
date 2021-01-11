@@ -1,0 +1,14 @@
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/repository/CalculatorRepository.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/rest/dto/AdditionDto.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/rest/dto/SubtractionDto.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/rest/dto/DivisionDto.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/service/CalculatorService.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/transformer/CalculationMapper.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/helpers/enums/Operator.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/validation/NotZeroValidator.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/rest/dto/CalculationDto.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/SimpleCalculatorApplication.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/validation/constraint/NotZero.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/model/Calculation.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/rest/dto/MultiplicationDto.java
+/home/lschadron/Documents/simple-calculator/src/main/java/nl/quintor/simplecalculator/web/rest/CalculatorController.java
