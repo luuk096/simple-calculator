@@ -13,13 +13,13 @@ public class Calculation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private double x;
+    private double leftOperand;
     private Operator operator;
-    private double y;
+    private double rightOperand;
     private double result;
 
-    public Calculation setX(double x) {
-        this.x = x;
+    public Calculation setLeftOperand(double leftOperand) {
+        this.leftOperand = leftOperand;
         return this;
     }
 
@@ -28,8 +28,8 @@ public class Calculation {
         return this;
     }
 
-    public Calculation setY(double x) {
-        this.y = y;
+    public Calculation setRightOperand(double rightOperand) {
+        this.rightOperand = rightOperand;
         return this;
     }
 

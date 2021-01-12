@@ -16,48 +16,47 @@ public class CalculatorService {
         this.calculatorRepository = calculatorRepository;
     }
 
-    public Calculation add(int x, int y) {
-        double result = x + y;
+    public Calculation calculate(int leftOperand, Operator operator, int rightOperand) {
+        double result = 0;
+        switch (operator) {
+            case Add:
+                result = add(leftOperand, rightOperand);
+                break;
+            case Subtract:
+                result = subtract(leftOperand, rightOperand);
+                break;
+            case Multiply:
+                result = multiply(leftOperand, rightOperand);
+                break;
+            case Divide:
+                result = divide(leftOperand, rightOperand);
+                break;
+            default:
+                break;
+        }
+
         Calculation calculation = new Calculation()
-                .setX(x)
-                .setOperator(Operator.Add)
-                .setY(y)
+                .setLeftOperand(leftOperand)
+                .setOperator(operator)
+                .setRightOperand(rightOperand)
                 .setResult(result);
-        calculatorRepository.save(calculation);
-        return calculation;
+        return calculatorRepository.save(calculation);
     }
 
-    public Calculation subtract(int x, int y) {
-        double result = x - y;
-        Calculation calculation = new Calculation()
-                .setX(x)
-                .setOperator(Operator.Subtract)
-                .setY(y)
-                .setResult(result);
-        calculatorRepository.save(calculation);
-        return calculation;
+    private double add(int addend, int augend) {
+        return addend + augend;
     }
 
-    public Calculation multiply(int x, int y) {
-        double result = x * y;
-        Calculation calculation = new Calculation()
-                .setX(x)
-                .setOperator(Operator.Multiply)
-                .setY(y)
-                .setResult(result);
-        calculatorRepository.save(calculation);
-        return calculation;
+    private double subtract(int minuend, int subtrahend) {
+        return minuend - subtrahend;
     }
 
-    public Calculation divide(int x, int y) {
-        double result = x / y;
-        Calculation calculation = new Calculation()
-                .setX(x)
-                .setOperator(Operator.Divide)
-                .setY(y)
-                .setResult(result);
-        calculatorRepository.save(calculation);
-        return calculation;
+    private double multiply(int multiplier, int multiplicand) {
+        return multiplier * multiplicand;
+    }
+
+    private double divide(int dividend, int divisor) {
+        return (double) dividend / divisor;
     }
 
     public List<Calculation> findAll() {
