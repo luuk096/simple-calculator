@@ -5,6 +5,7 @@ import nl.quintor.simplecalculator.service.CalculatorService;
 import nl.quintor.simplecalculator.web.rest.dto.*;
 import nl.quintor.simplecalculator.web.transformer.CalculationMapper;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/calculator")
 @CrossOrigin
+@Validated
 public class CalculatorController {
 
     private final CalculatorService calculatorService;
